@@ -26,3 +26,17 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Profile Image Styling */
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4b0082;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
