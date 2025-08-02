@@ -81,7 +81,7 @@ a:hover {
   z-index: 1000;
 }
 
-/* Dark Mode Styles */
+/* 🌙 Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -100,4 +100,19 @@ body.dark-mode .skills span {
 body.dark-mode .theme-toggle {
   background-color: #e0e0e0;
   color: #121212;
+}
+
+/* 🌙 Theme Toggle Button Style */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000;
 }
