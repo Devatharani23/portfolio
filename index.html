@@ -8,6 +8,9 @@
 </head>
 <body>
 
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
   <!-- Profile Image Section -->
   <div class="profile">
     <img src="profile.jpg" alt="Devatharani Ramasamy" class="profile-pic" />
@@ -18,12 +21,23 @@
     <p>👩‍🎓 BSc IT student at Krishnammal College for Women</p>
     <p>💡 Passionate about AI, Machine Learning, IoT, Python</p>
 
-    <h2>📂 Projects</h2>
+    <!-- 👩 About Me -->
+    <h2>👩 About Me</h2>
+    <p>
+      I’m an enthusiastic student passionate about Artificial Intelligence, Data Science, and IoT. 
+      I love solving real-world problems with code, especially using Python and its powerful libraries. 
+      I'm currently learning Data Structures, AI/ML frameworks, and working on meaningful projects to build my skills.
+    </p>
+
+    <!-- 🎓 Education -->
+    <h2>🎓 Education</h2>
     <ul>
-      <li><a href="https://github.com/Devatharani23/Library-Management-System" target="_blank">Library Management System (Python)</a></li>
+      <li><strong>BSc Information Technology</strong> – Krishnammal College for Women, Coimbatore (2022–2025)</li>
+      <li><strong>Higher Secondary</strong> – S.S.B.M.V Matric Hr. Secondary School, Coimbatore (2020–2022)</li>
+      <li><strong>SSLC</strong> – S.S.B.M.V Matric Hr. Secondary School, Coimbatore (2019–2020)</li>
     </ul>
 
-    <!-- 🔧 SKILLS SECTION -->
+    <!-- 🛠 Skills -->
     <h2>🛠 Skills</h2>
     <div class="skills">
       <span>Python</span>
@@ -36,12 +50,32 @@
       <span>Git & GitHub</span>
     </div>
 
-    <h2>🔗 Connect with Me</h2>
-    <p>
-      <a href="https://www.linkedin.com/in/devatharani-ramasamy-ab55bb320" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Devatharani23" target="_blank">GitHub</a>
-    </p>
+    <!-- 📂 Projects -->
+    <h2>📂 Projects</h2>
+    <ul>
+      <li><a href="https://github.com/Devatharani23/Library-Management-System" target="_blank">Library Management System (Python)</a></li>
+    </ul>
+
+    <!-- 📩 Contact -->
+    <h2>📩 Contact</h2>
+    <p>You can reach out to me through:</p>
+    <ul>
+      <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/devatharani-ramasamy-ab55bb320" target="_blank">Devatharani Ramasamy</a></li>
+      <li>GitHub: <a href="https://github.com/Devatharani23" target="_blank">@Devatharani23</a></li>
+    </ul>
   </div>
+
+  <!-- JavaScript for Theme Toggle -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      const btn = document.querySelector(".theme-toggle");
+      btn.textContent = document.body.classList.contains("dark-mode")
+        ? "☀️ Toggle Theme"
+        : "🌙 Toggle Theme";
+    }
+  </script>
 
 </body>
 </html>
