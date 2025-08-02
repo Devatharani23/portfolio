@@ -1,22 +1,22 @@
-/* Base Styling */
+* Base Styling */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background-color: #fff;
   color: #333;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .container {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 40px auto;
+  padding: 40px 30px;
 }
 
 h1, h2 {
   color: #4b0082;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 h1 span {
@@ -29,7 +29,7 @@ ul {
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 a {
@@ -41,14 +41,16 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Profile Image Styling */
 .profile {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #4b0082;
@@ -60,23 +62,14 @@ a:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .skills span {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 8px 12px;
-  border-radius: 20px;
+  background-color: #eee;
+  padding: 6px 12px;
+  border-radius: 4px;
   font-size: 14px;
-  font-weight: 500;
-  border: 1px solid #ddd;
-  transition: all 0.3s ease;
-}
-
-.skills span:hover {
-  background-color: #4b0082;
-  color: white;
-  transform: scale(1.05);
 }
 
 /* Theme Toggle Button */
@@ -94,7 +87,7 @@ a:hover {
   z-index: 1000;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode Styling */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -113,19 +106,4 @@ body.dark-mode .skills span {
 body.dark-mode .theme-toggle {
   background-color: #e0e0e0;
   color: #121212;
-}
-
-/* Theme Toggle Button Style */
-.theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #4b0082;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  z-index: 1000;
 }
