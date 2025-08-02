@@ -40,3 +40,28 @@ a:hover {
   border: 3px solid #4b0082;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skills span {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.skills span:hover {
+  background-color: #4b0082;
+  color: white;
+  transform: scale(1.05);
+}
