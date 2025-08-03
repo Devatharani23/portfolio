@@ -1,3 +1,22 @@
+
+/* 🎨 Color Themes */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #4b0082;
+  --badge-color: #e6e6fa;
+  --button-hover: #a64bf4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --accent-color: #a64bf4;
+    --badge-color: #3a3a3a;
+    --button-hover: #d1a4ff;
+  }
+}
 * Base Styling */
 body {
   font-family: 'Times New Roman', Times, serif;
