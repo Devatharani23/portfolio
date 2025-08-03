@@ -131,10 +131,13 @@ body.dark-mode .theme-toggle {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   vertical-align: middle;
   margin-right: 10px;
+  border-radius: 6px;
+  background-color: white; /* Add background */
+  padding: 3px;
 }
 
 button, .btn, a.button-style {
