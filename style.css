@@ -1,30 +1,28 @@
-
-/* 🎨 Color Themes */
+/* 🎨 Theme Variables for Light & Dark Mode */
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #f0e4c2; /* Stronger beige */
   --text-color: #333333;
   --accent-color: #4b0082;
-  --badge-color: #e6e6fa;
+  --badge-color: #fff3d1; /* Matched badge for beige */
   --button-hover: #a64bf4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #121212;
-    --text-color: #f0f0f0;
-    --accent-color: #a64bf4;
-    --badge-color: #3a3a3a;
-    --button-hover: #d1a4ff;
-  }
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #a64bf4;
+  --badge-color: #2b2b2b; /* Dark badge for contrast */
+  --button-hover: #d1a4ff;
 }
-* Base Styling */
+
+/* 🌐 Global Styles */
 body {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #fff;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Times New Roman", serif;
   margin: 0;
   padding: 0;
-  line-height: 1.8;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 .container {
@@ -34,7 +32,7 @@ body {
 }
 
 h1, h2 {
-  color: #4b0082;
+  color: var(--accent-color);
   margin-bottom: 16px;
 }
 
@@ -52,7 +50,7 @@ ul li {
 }
 
 a {
-  color: #4b0082;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -60,7 +58,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Profile Image Styling */
+/* 👤 Profile Image Styling */
 .profile {
   text-align: center;
   margin-top: 30px;
@@ -69,13 +67,13 @@ a:hover {
 
 @keyframes glowPulse {
   0% {
-    box-shadow: 0 0 0px #a64bf4;
+    box-shadow: 0 0 0px var(--button-hover);
   }
   50% {
-    box-shadow: 0 0 25px #a64bf4;
+    box-shadow: 0 0 25px var(--button-hover);
   }
   100% {
-    box-shadow: 0 0 0px #a64bf4;
+    box-shadow: 0 0 0px var(--button-hover);
   }
 }
 
@@ -84,20 +82,18 @@ a:hover {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #4b0082;
+  border: 4px solid var(--accent-color);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   animation: glowPulse 3s ease-in-out infinite;
 }
 
-
-/* Hover effect */
 .profile-pic:hover {
-  transform: scale(1.05); /* slight zoom */
-  box-shadow: 0 0 25px #a64bf4; /* purple glow */
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--button-hover);
 }
 
-/* Skills Section */
+/* 🧠 Skills Section */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -106,19 +102,28 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.skills span {
-  background-color: #eee;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
+.skills li {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: var(--badge-color); /* Uses light/dark theme */
+  color: var(--accent-color);
+  border-radius: 8px;
+  margin: 6px;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Theme Toggle Button */
+.skills li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px var(--button-hover);
+}
+
+/* 🌙 Theme Toggle Button */
 .theme-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #4b0082;
+  background-color: var(--accent-color);
   color: white;
   border: none;
   padding: 8px 14px;
@@ -128,39 +133,20 @@ a:hover {
   z-index: 1000;
 }
 
-/* Dark Mode Styling */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode a {
-  color: #80dfff;
-}
-
-body.dark-mode .skills span {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-body.dark-mode .theme-toggle {
-  background-color: #e0e0e0;
-  color: #121212;
-}
-
+/* 🔗 Contact Icons */
 .icon {
   width: 24px;
   height: 24px;
   vertical-align: middle;
   margin-right: 10px;
   border-radius: 6px;
-  background-color: white; /* Add background */
+  background-color: white;
   padding: 3px;
 }
 
+/* 🔘 Buttons & Links */
 button, .btn, a.button-style {
-  background-color: #4b0082;
+  background-color: var(--accent-color);
   color: #fff;
   padding: 10px 18px;
   border: none;
@@ -171,23 +157,7 @@ button, .btn, a.button-style {
 }
 
 button:hover, .btn:hover, a.button-style:hover {
-  background-color: #a64bf4;
+  background-color: var(--button-hover);
   transform: scale(1.05);
-  box-shadow: 0 0 15px #a64bf4;
-}
-
-.skills li {
-  display: inline-block;
-  padding: 8px 14px;
-  background-color: #e6e6fa;
-  color: #4b0082;
-  border-radius: 8px;
-  margin: 6px;
-  font-weight: 500;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills li:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 12px #d1a4ff;
+  box-shadow: 0 0 15px var(--button-hover);
 }
